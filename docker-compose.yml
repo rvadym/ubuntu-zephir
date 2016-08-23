@@ -1,0 +1,7 @@
+version: '2'
+services:
+    zephir:
+        image: rvadym/ubuntu-zephir
+        volumes:
+            - ./exts:/app
+        tty: true
