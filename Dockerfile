@@ -32,7 +32,8 @@ RUN apt-get update && apt-get install -y curl \
                       nodejs npm \
 
                       apache2 libapache2-mod-php7.0 php-xdebug \
-                      git vim htop bmon git wget unzip && \
+                      git vim htop bmon git wget unzip \
+                      gcc make re2c libpcre3-dev php7.0-dev build-essential php7.0-zip && \
 
 
 
@@ -42,6 +43,9 @@ RUN apt-get update && apt-get install -y curl \
 
     # Install composer
     curl https://getcomposer.org/installer | php -- && mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer
+
+RUN git clone https://github.com/phalcon/zephir && cd zephir && ./install -c
+
 
 # INSTALL SOFTWARE ----------------------------------------------------------------------
 
