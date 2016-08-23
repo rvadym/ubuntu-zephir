@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y curl \
 
                       apache2 libapache2-mod-php7.0 php-xdebug \
                       git vim htop bmon git wget unzip \
-                      gcc make re2c libpcre3-dev php7.0-dev build-essential php7.0-zip && \
+                      sudo gcc make re2c libpcre3-dev php7.0-dev build-essential php7.0-zip && \
 
 
 
